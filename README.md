@@ -2,6 +2,8 @@
 
 A standalone app and DAW plugin that plays Nord Modular G2 (`.pch2`) and Nord Modular G1 (`.pch`) patches. Each module in a patch runs as native C++ code, connected by the patch cables. Nothing is emulated and no firmware is needed.
 
+![Modubox](modubox.webp)
+
 [![Download](https://img.shields.io/badge/Download-1.0_beta-blue?style=for-the-badge&logo=github)](https://github.com/reales/Modubox/releases)
 
 | Platform | Formats | Download |
