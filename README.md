@@ -61,6 +61,6 @@ Open an [issue](https://github.com/reales/Modubox/issues) or write to [discoDSP 
 
 ## Credits
 
-- G2 parameter scaling uses tables from [pch2csd](https://github.com/gleb812/pch2csd) (MIT), see [THIRD-PARTY.md](THIRD-PARTY.md).
+- G2 parameter scaling uses tables from [pch2csd](https://github.com/gleb812/pch2csd) (MIT).
 - Oversampling filters: [hiir](http://ldesoras.free.fr/prod.html#src_hiir) by Laurent de Soras (WTFPL).
 - Nord Modular is a trademark of Clavia DMI AB. Modubox is not affiliated with Clavia.
