@@ -4,13 +4,13 @@ A standalone app and DAW plugin that plays Nord Modular G2 (`.pch2`) and Nord Mo
 
 ![Modubox](modubox.webp)
 
-[![Download](https://img.shields.io/badge/Download-1.0_beta-blue?style=for-the-badge&logo=github)](https://github.com/reales/Modubox/releases)
+[![Download](https://img.shields.io/badge/Download-1.0_beta_2-blue?style=for-the-badge&logo=github)](https://github.com/reales/Modubox/releases)
 
 | Platform | Formats | Download |
 |---|---|---|
 | macOS 12 or later (Apple silicon and Intel) | Standalone, VST3, AU | `Modubox.dmg` (signed and notarized) |
-| Windows 10 or later, 64-bit | Standalone | `ModuboxWindows.zip` (signed) |
-| Linux x86_64 (ALSA, X11, FreeType) | Standalone | `ModuboxLinux.zip` |
+| Windows 10 or later, 64-bit | Standalone (WASAPI, DirectSound, ASIO) | `ModuboxWindows.zip` (signed) |
+| Linux x86_64 (ALSA, X11, FreeType) | Standalone (ALSA, JACK) | `ModuboxLinux.zip` |
 
 Modubox is free closed-source software by [discoDSP](https://www.discodsp.com/). This repository holds the releases and the issue tracker only.
 
@@ -20,18 +20,27 @@ This is a beta. Each build stops making sound 90 days after it was built. Newer 
 
 ## First steps
 
-1. Windows and Linux: click the gear at the bottom right and pick your audio device and MIDI input. On macOS use Options in the app menu.
-2. Click the eject button at the top left and open a patch, or drop a file on the window. Modubox opens `.pch2`, `.pch`, `.syx` and `.mid` files.
+1. Click the gear at the bottom right, choose Audio/MIDI Settings and pick your audio device and MIDI input. On macOS this is also in Options in the app menu.
+2. Click the eject button at the top left and open a patch, or drop a file on the window. Modubox opens `.pch2`, `.pch`, `.syx` and `.mid` files. Click the patch name to pick another patch from the same folder.
 3. Play from a MIDI keyboard, the on-screen keyboard or the computer keyboard: Z to M and Q to P play two octaves, comma and period move the octave down and up.
 4. Hover over or click a module to highlight its cables.
 
 In a DAW, the patch is saved with the project.
 
+## Knobs, morphs and variations
+
+The knobs assigned in a patch appear above it with their parameter names, grouped by module in signal flow order, 8 to a page. While a knob turns, its value shows in the group label. In a DAW they are 32 automatable parameters named after what they control, plus a Variation parameter.
+
+- Morphs follow their knob or their source: mod wheel, velocity, keyboard, aftertouch, sustain and control pedals, pitch bend.
+- MIDI controller assignments stored in the patch change their parameters.
+- G2 patches show a variation selector. Click its display to jump to a variation. Knob changes are kept per variation, as on the hardware.
+- The gear holds the patch settings (glide, glide time, bend range, patch gain, read from the patch) and Panic, which stops all notes and resets the patch.
+
 ## Modules
 
 All 165 G2 module types load: oscillators (including the DX7 operator and its 32 algorithms), envelopes, LFOs, random generators, filters, the 16-band vocoder, delays, reverb, chorus, flanger, phaser, frequency and pitch shifters, compressor, sequencers, logic, switches, mixers and MIDI input modules. G1 patches have their own module set, tuned by ear and against reference recordings.
 
-Not supported yet: morphs, knob assignments, variation switching, the patch settings (glide, bend range, patch gain) and MIDI out. Outputs 3 and 4 are mixed into 1 and 2.
+Not supported yet: MIDI out. Outputs 3 and 4 are mixed into 1 and 2.
 
 ## Loading patches by SysEx
 
