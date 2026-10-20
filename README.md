@@ -4,7 +4,7 @@ A standalone app and DAW plugin that plays Nord Modular G2 (`.pch2`) and Nord Mo
 
 ![Modubox](modubox.webp)
 
-[![Download](https://img.shields.io/badge/Download-1.0_beta_2-blue?style=for-the-badge&logo=github)](https://github.com/reales/Modubox/releases)
+[![Download](https://img.shields.io/badge/Download-1.0_beta_3-blue?style=for-the-badge&logo=github)](https://github.com/reales/Modubox/releases)
 
 | Platform | Formats | Download |
 |---|---|---|
@@ -40,7 +40,9 @@ The knobs assigned in a patch appear above it with their parameter names, groupe
 
 All 165 G2 module types load: oscillators (including the DX7 operator and its 32 algorithms), envelopes, LFOs, random generators, filters, the 16-band vocoder, delays, reverb, chorus, flanger, phaser, frequency and pitch shifters, compressor, sequencers, logic, switches, mixers and MIDI input modules. G1 patches have their own module set, tuned by ear and against reference recordings.
 
-Not supported yet: MIDI out. Outputs 3 and 4 are mixed into 1 and 2.
+In the VST3 and AU, outputs 3 and 4 come out on a second stereo output (Out 3/4) when the host enables it. Otherwise they are mixed into 1 and 2.
+
+Not supported yet: MIDI out, audio input.
 
 ## Loading patches by SysEx
 
